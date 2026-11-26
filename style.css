@@ -1,0 +1,48 @@
+/* Tedding — support & privacy pages. Palette: day / night (Tedding/Theme/Theme.swift). */
+:root {
+  --bg: #f1f3f6;
+  --card: #ffffff;
+  --border: #e4e7ec;
+  --text: #171a21;
+  --muted: #4d535e;
+  --accent: #3f4fd9;
+  --warm: #fff1e4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12100e;
+    --card: #211b17;
+    --border: #30271f;
+    --text: #efe4d6;
+    --muted: #c4b5a5;
+    --accent: #a3a9ec;
+    --warm: #2a1d13;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+.langs { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; margin-bottom: 32px; }
+.langs a { text-decoration: none; }
+.langs [aria-current] { color: var(--text); font-weight: 700; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+header img { width: 72px; height: 72px; flex: none; }
+h1, h2 { font-weight: 800; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0; }
+h2 { font-size: 21px; line-height: 1.3; margin: 36px 0 8px; }
+p, li { color: var(--muted); }
+strong { color: var(--text); }
+a { color: var(--accent); overflow-wrap: anywhere; }
+ul { padding-left: 22px; }
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 4px 20px; margin: 16px 0;
+}
+.card.warm { background: var(--warm); }
+nav.foot { margin-top: 48px; font-size: 15px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
